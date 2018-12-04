@@ -20,6 +20,29 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    sentry: {
+      dsn: 'https://b53cb08e298e4ff496c0c676e5eb576f@sentry.io/1328216',
+      globalErrorCatching: false
+    },
+
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
+      'style-src': "'self' 'unsafe-inline' https://fonts.googleapis.com",
+      'font-src': "'self' fonts.gstatic.com",
+      'img-src': [
+        "'self'",
+        "data: app.getsentry.com"
+      ],
+      'connect-src': [
+        "'self'",
+        'app.getsentry.com'
+      ],
+      // `media-src` will be omitted from policy
+      // Browser will fallback to default-src for media resources (which is to deny, see above).
+      'media-src': null
     }
   };
 
