@@ -20,7 +20,7 @@ module.exports = function(deployTarget) {
   if (deployTarget === 'production') {
     ENV.build.environment = 'production';
     ENV.sentry = {
-      publicUrl: 'https://peaceful-escarpment-32985.herokuapp.com',
+      publicUrl: 'https://safe-oasis-39380.herokuapp.com',
       sentryUrl: 'https://sentry.io/',
       sentryOrganizationSlug: 'villander',
       sentryProjectSlug: 'javascript',
